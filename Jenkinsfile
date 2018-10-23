@@ -12,6 +12,7 @@ pipeline {
         sh 'mvn -B -DskipTests clean package'
       }
     }
+    
     stage('JDK 11 Build & Test') {
           steps {
             container('maven-container-jdk-11') {
